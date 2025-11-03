@@ -30,8 +30,9 @@ export default function ContactsList({ onSelect }: Props) {
   const items = data?.items || [];
   const total = data?.total || 0;
 
-  const Row = useCallback(
-    ({ index, style }) => {
+ const Row = useCallback(
+  ({ index, style }: { index: number; style: React.CSSProperties }) => {
+
       const c = items[index];
       if (!c) return <div style={style} />;
 
